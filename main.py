@@ -8,7 +8,7 @@ import random
 # For this reason, we calculate what those years are for each user given their current age
 # and the current year, which we pull using datetime.
 
-number_of_songs_per_year = int(input("How many songs per year would you like? Please type an integer: \n\n"))
+number_of_songs_per_year = int(input("\n\nHow many songs per year would you like? Please type an integer (max 100): \n\n"))
 age = int(input("\n\nWhat is your current age?:\n\n"))
 prime_age_start = int(11)
 prime_age_end = int(15)
@@ -55,9 +55,9 @@ def dates_finder(year):
     return last_date
 
 # This is a random number generator, which spits out a non-repeating
-# selection from the top 40 songs in a given year. It's just a way of getting values as a list.
+# selection from the top 100 songs in a given year. It's just a way of getting values as a list.
 
-random_numbers = (random.sample(range(40), int(f"{number_of_songs_per_year}")))
+random_numbers = (random.sample(range(100), int(f"{number_of_songs_per_year}")))
 
 years_list = nostalgia_years_generator() # list of the Nostalgia Years.
 
